@@ -10,16 +10,16 @@ export const ChatInput = ({ name }: Props) => {
     const [textInput, setTextInput] = useState('')
 
     const handleKeyUpAction = (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if(event.code.toLocaleLowerCase() === 'enter') {
-            if(textInput.trim() !== ''){
+        if (event.code.toLocaleLowerCase() === 'enter') {
+            if (textInput.trim() !== '') {
                 chatCtx?.addMessage(name, textInput.trim());
                 setTextInput('');
             }
         }
     }
-    
-    return(
-        <input 
+
+    return (
+        <input
             className="w-full bg-transparent text-white text-md outline-none"
             placeholder={`${name}, Digite uma mensagem`}
             value={textInput}
