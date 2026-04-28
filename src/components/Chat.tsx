@@ -1,5 +1,6 @@
 import { UserContext, useUser } from "@/app/context/UserContext"
 import { NameInput } from "./NameInput";
+import { ChatInput } from "./ChatInput";
 
 export const Chat = () => {
     // 1 - Saber o nome do usuario
@@ -17,7 +18,10 @@ export const Chat = () => {
                 ...
             </div>
             <div className="border-t border-t-white/30 p-3">
-                ...
+                <ChatInput name={userCtx.user}/>
+            </div>
+            <div className="border-t border-t-white/30 p-3">
+                <ChatInput name={'bot'}/>
             </div>
         </div>
     )
